@@ -14,3 +14,8 @@ class BusStop:
     def clear(self):
         self.queue.clear()
 
+    def person_gets_on_bus(self, destination):
+        for person in self.queue:
+            if person.destination == bus.destination:
+                bus.passengers.append(person)
+

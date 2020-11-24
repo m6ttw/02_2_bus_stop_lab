@@ -54,3 +54,11 @@ class TestBus(unittest.TestCase):
         bus_stop.add_to_queue(person_2)
         self.bus.pick_up_from_stop(bus_stop)
         self.assertEqual(2, self.bus.passenger_count())
+
+    def test_correct_bus_destination(self):
+        person_1 = Person("Guido van Rossum", 64, "Waverly Station")
+        .destination = BusStop(destination)
+        bus_stop.add_to_queue(person_1)
+        bus_stop.add_to_queue(person_2)
+        self.bus.person_gets_on_bus(bus.destination)
+        self.assertEqual(1, self.bus.passenger_count())
